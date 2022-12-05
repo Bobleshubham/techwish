@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Communication with apex">
+        <lightning-input type="number" label="Minimum Annual Revenue" onchange={minArv}></lightning-input>
+        <lightning-input type="number" label="Minimum Annual Revenue" onchange={maxArv}></lightning-input>
+        <div class="slds-m-around_medium">
+            <template if:true={gard.data}>
+                <div class="slds-col slds-size_1-of-6">
+                    <template for:each={gard.data} for:item="ac"> 
+                        <div key={ac.id}>name:{ac.Name}   
+                            <p>billingCity: {ac.BillingCity}</p>
+                            <p>rating:{ac.Rating}</p> 
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div> 
+    </lightning-card>
+</template>

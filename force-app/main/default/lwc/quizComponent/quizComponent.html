@@ -1,0 +1,86 @@
+ <template>
+<lightning-card title="Quiz Lwc Component">
+    <div class="slds-m-around_medium">
+    <form>
+    <div>
+        <template for:each={myquestions} for:item="quiz"> <!--hear in for each loop we are itreating the array collection-->
+            <div key={quiz.id}>
+                <div>{quiz.id}-{quiz.question}</div>   <!--here we are calling id and question by using for each ref variable-->
+
+                <div>
+                    <input type="radio" name={quiz.id} value="a"/>   <!---->
+                    {quiz.answers.a}
+                </div>
+                <div>
+                    <input type="radio" name={quiz.id} value="b"/>
+                    {quiz.answers.b}
+                </div>
+                <div>
+                    <input type="radio" name={quiz.id} value="c"/>
+                    {quiz.answers.c}
+                </div>
+                </div>
+                
+            </template>
+                <lightning-button 
+                variant="brand" 
+                type="submit"
+                label="Submit"></lightning-button>
+
+                <lightning-button 
+                variant="brand" 
+                type="reset"
+                label="Reset"></lightning-button>
+
+        
+    </div>
+</form>
+</div>
+</lightning-card>
+
+ </template>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--<template >
+  <lightning-card title="LWC Quiz App">
+    <div>
+       <template for:each={questions} for:item="quiz">
+            <div key={quiz.id}> 
+                <div>{quiz.id} - {quiz.Question}</div>
+                <div class="slds-grid slds-gutters">
+                    <div>
+                        <input type="radio" name={quiz.id} value="a"/>
+                        {quiz.answers.a}
+                    </div>
+                    <div>
+                        <input type="radio" name={quiz.id} value="b"/>
+                        {quiz.answers.a}
+                    </div>
+                    <div>
+                        <input type="radio" name={quiz.id} value="c"/>
+                        {quiz.answers.a}
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+  </lightning-card>
+</template> -->

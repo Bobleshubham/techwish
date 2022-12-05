@@ -1,0 +1,15 @@
+<template>
+    <div>
+    <lightning-card title="parent to chalid component">
+    <c-child-lwc-component massage="Hi good morning welcome to techwish"></c-child-lwc-component>
+    <lightning-input type="text" label="first name"   onchange={fname}></lightning-input>
+    <lightning-input type="text" label="company"   onchange={cname}></lightning-input>
+    <div>hello {firstname} welcome to {company}
+        and {additionofnumbers}
+    </div>
+    <lightning-input type="number" label="first no" onclick={addno} ></lightning-input>
+    <lightning-input type="number" label="second no" onclick={addno} ></lightning-input>
+    <lightning-input type="number" label="third no" onclick={addno} ></lightning-input>
+</lightning-card>
+</div>
+</template>
